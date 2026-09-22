@@ -1,0 +1,17 @@
+name:continous intergration
+
+on:
+push:
+  branches:["main"]
+
+  job:
+   build:
+   run-on:ubuntu-latest
+
+   -name:checkout repository
+   
+   uses:action/checkout@v4
+
+   -name:CI Check
+   
+   run:echo "contiousn intergration successful"
