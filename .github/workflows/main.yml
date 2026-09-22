@@ -1,17 +1,16 @@
-name:continous intergration
+name : continous intergration
 
 on:
-push:
-  branches:["main"]
+  push:
+    branches: ["main"]
 
-  job:
+jobs:
    build:
-   run-on:ubuntu-latest
+     run-on: ubuntu-latest
 
-   -name:checkout repository
-   
-   uses:action/checkout@v4
+     steps: 
+       -name: checkout repository
+        uses: action/checkout@v4
 
-   -name:CI Check
-   
-   run:echo "contiousn intergration successful"
+       -name:  CI Check
+        run: echo "contiousn intergration successful"
